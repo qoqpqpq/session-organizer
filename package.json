@@ -34,5 +34,10 @@
     "cordis.patch.yml",
     "README.md"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qoqpqpq/session-organizer.git"
+  },
+  "homepage": "https://github.com/qoqpqpq/session-organizer"
 }
