@@ -1,0 +1,38 @@
+{
+  "name": "session-organizer",
+  "version": "1.0.0",
+  "description": "dsh 会话整理插件：扫描并聚类同主题会话、识别长期未用/无实质内容会话、支持归档/合并/清理，提供侧栏入口面板与模型工具 session_organizer。常驻于 web profile，重启后仍可用。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "session",
+    "organizer",
+    "会话整理",
+    "archive",
+    "merge",
+    "cluster"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT"
+}

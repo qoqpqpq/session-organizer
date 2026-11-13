@@ -1,0 +1,15 @@
+# session-organizer bundle patch
+#
+# Mounts the session organizer plugin into the profile loader. `name` must
+# resolve from the profile node_modules (installed via the profile's
+# `dsh.profile.bundles` + `dependencies`), and the client half is served by
+# the host at /plugins/session-organizer/client.js.
+#
+# The host half reaches host-plane services via ctx.get('sessionQuery'),
+# ctx.get('workspaceRegistry'), ctx.get('sessions'), ctx.get('tools') and
+# ctx.inject(['webServer']) — all are host-plane rows in dsh-base, so a
+# resident bundle plugin can use them directly.
+- insert:
+    - id: session-organizer
+      name: 'session-organizer'
+      config: {}
